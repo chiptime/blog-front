@@ -1,0 +1,28 @@
+.containerHeader {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.searchIcon {
+    margin-left: auto;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+}
+
+.HBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marginLS {
+    margin-left: 0.8rem;
+}
+
+.marginRS {
+    margin-right: 0.8rem;
+}
