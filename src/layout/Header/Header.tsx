@@ -22,9 +22,6 @@ const headersData: Url[] = [
 const useStyles = makeStyles(() => ({
     header: {
         height: '3.5rem',
-        // backgroundColor: "#400CCC",
-        // paddingRight: "79px",
-        // paddingLeft: "118px",
         [`@media (max-width: ${MOBILE_BREAKPOINT}px)`]: {
             paddingLeft: 0,
         },

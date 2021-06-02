@@ -1,17 +1,13 @@
 import ArticleCard from "../shared/UI/components/ArticleCard";
-import { LinkedIn, FavoriteBorderOutlined } from '@material-ui/icons';
 import {
     makeStyles,
     Typography,
     Link,
     MenuItem,
-    Button
 } from "@material-ui/core";
+
 const useStyles = makeStyles((theme) => ({
     pageContainer: {
-        // maxWidth: theme.breakpoints.values.sm,
-        // marginLeft: 'auto',
-        // marginRight: 'auto'
     },
     list: {
         padding: '0',
@@ -155,7 +151,7 @@ function Home() {
 
     const oArticle = {
         title: 'Learn git concepts, not commands',
-        url: '',
+        url: '/posts/b',
         imgSrc: 'https://res.cloudinary.com/practicaldev/image/fetch/s--Vb8HmBo4--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/1k7xftlw20xk6jgyldlj.jpeg',
         isVisibleImg: true,
         user: {
@@ -171,7 +167,7 @@ function Home() {
         reactions: 304,
         comments: 438,
         timeToRead: 2,
-        otro: 'dasd'
+        otro: 'dasd',
     };
 
     const data = Array(10).fill(oArticle).map((i, index) => ({ ...i, isVisibleImg: !index }));

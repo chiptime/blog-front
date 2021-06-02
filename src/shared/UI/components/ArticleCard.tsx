@@ -1,6 +1,4 @@
-import logo from '../logo.svg';
 import {
-    AppBar,
     makeStyles,
     Avatar,
     Button,
@@ -8,20 +6,8 @@ import {
     Typography
 } from "@material-ui/core";
 
-import { ChatBubbleOutlineOutlined, FavoriteBorderOutlined, PhotoCamera, TurnedInNot } from '@material-ui/icons';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
-
-// import React, { useState, useEffect } from "react";
-// import { Mobile } from './Mobile';
-// import { Desktop } from './Desktop';
-// import { Url } from "./interfaces";
-// import { MOBILE_BREAKPOINT } from "../../shared/UI";
-
+import history from '../../../history';
+import { ChatBubbleOutlineOutlined, FavoriteBorderOutlined, TurnedInNot } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     mainImg: {
@@ -164,7 +150,7 @@ interface ArticleCardData {
 export default function ArticleCard({ data }: { data: ArticleCardData }) {
     const { mainImg, timeToRead, tagContainer, saveToLaterButton, likesButton, postLink, commentsButton, buttonsContainer, tag, containerContent, container, userContainer, nameContainer, publishDate, name } = useStyles();
 
-    const tags = data.tags.map(t => <a href={t.url} className={tag}>#{t.name}</a>);
+    const tags = data.tags.map(t => <a onClick={() => history.push(t.url)} className={tag}>#{t.name}</a>);
 
     return (
         <article className={container}>
@@ -191,7 +177,7 @@ export default function ArticleCard({ data }: { data: ArticleCardData }) {
                     <a href={data.url} className={postLink}>{data.title}</a>
                 </Typography> */}
                 <h2>
-                    <a href={data.url} className={postLink}>{data.title}</a>
+                    <a onClick={() => history.push(data.url)} className={postLink}>{data.title}</a>
                 </h2>
 
                 <dl className={tagContainer}>{tags}</dl>

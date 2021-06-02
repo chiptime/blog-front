@@ -2,7 +2,8 @@ import {
     Typography,
     makeStyles
 } from "@material-ui/core";
-
+import history from '../../history';
+// import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles(() => ({
     logo: {
@@ -15,8 +16,10 @@ const useStyles = makeStyles(() => ({
 
 export const Logo = (() => {
     const { logo } = useStyles();
+    // const history = useHistory();
+    const handleOnClick = () => history.push('/');
 
-    return <Typography variant="h6" component="h1" className={logo}>
+    return <Typography variant="h6" component="h1" className={logo} onClick={handleOnClick}>
         DEV
     </Typography>
-});
+})
